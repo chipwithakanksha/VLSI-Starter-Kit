@@ -1,0 +1,76 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : FullSub.vf
+// /___/   /\     Timestamp : 07/13/2025 15:20:39
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog /home/ise/VB_duplicate/Basic/FullSub.vf -w /home/ise/VB_duplicate/Basic/FullSub.sch
+//Design Name: FullSub
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module FullSub(A, 
+               B, 
+               C, 
+               RESET, 
+               Bout, 
+               D);
+
+    input A;
+    input B;
+    input C;
+    input RESET;
+   output Bout;
+   output D;
+   
+   wire XLXN_4;
+   wire XLXN_7;
+   wire XLXN_17;
+   wire XLXN_24;
+   wire XLXN_25;
+   wire XLXN_26;
+   wire XLXN_32;
+   wire XLXN_33;
+   
+   AND2  XLXI_2 (.I0(RESET), 
+                .I1(A), 
+                .O(XLXN_7));
+   AND2  XLXI_3 (.I0(B), 
+                .I1(RESET), 
+                .O(XLXN_4));
+   AND2  XLXI_6 (.I0(RESET), 
+                .I1(XLXN_24), 
+                .O(D));
+   AND2  XLXI_8 (.I0(XLXN_32), 
+                .I1(RESET), 
+                .O(Bout));
+   AND2  XLXI_9 (.I0(RESET), 
+                .I1(C), 
+                .O(XLXN_17));
+   AND2  XLXI_12 (.I0(XLXN_4), 
+                 .I1(XLXN_33), 
+                 .O(XLXN_26));
+   AND2  XLXI_13 (.I0(XLXN_17), 
+                 .I1(XLXN_24), 
+                 .O(XLXN_25));
+   OR2  XLXI_14 (.I0(XLXN_26), 
+                .I1(XLXN_25), 
+                .O(XLXN_32));
+   XOR3  XLXI_15 (.I0(XLXN_17), 
+                 .I1(XLXN_4), 
+                 .I2(XLXN_7), 
+                 .O(XLXN_24));
+   INV  XLXI_16 (.I(XLXN_7), 
+                .O(XLXN_33));
+endmodule
