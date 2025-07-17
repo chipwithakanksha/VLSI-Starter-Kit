@@ -1,5 +1,6 @@
 # VLSI Starter Kit
 Start your digital design journey with the simplest building blocks of computation.
+
 What's included:
 1. Half Adder
 2. Full Adder
