@@ -1,0 +1,6 @@
+Uploaded 2-bit Adder
+this folder includes:
+1. .vf file
+2. .sch file
+3. schematic png file
+4. waveform png file
