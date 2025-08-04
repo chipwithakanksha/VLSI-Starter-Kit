@@ -1,0 +1,38 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Bitwise_NOT.vf
+// /___/   /\     Timestamp : 08/04/2025 07:37:12
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog /home/ise/VB_duplicate/NewProject/Bitwise_NOT.vf -w /home/ise/VB_duplicate/NewProject/Bitwise_NOT.sch
+//Design Name: Bitwise_NOT
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Bitwise_NOT(A, 
+                   Bitwise_NOT);
+
+    input [3:0] A;
+   output [3:0] Bitwise_NOT;
+   
+   
+   INV  XLXI_5 (.I(A[0]), 
+               .O(Bitwise_NOT[0]));
+   INV  XLXI_6 (.I(A[1]), 
+               .O(Bitwise_NOT[1]));
+   INV  XLXI_7 (.I(A[2]), 
+               .O(Bitwise_NOT[2]));
+   INV  XLXI_8 (.I(A[3]), 
+               .O(Bitwise_NOT[3]));
+endmodule
